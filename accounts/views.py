@@ -30,7 +30,7 @@ class RegisterView(APIView):
         uid = urlsafe_base64_encode(force_bytes(user.pk))
         token = default_token_generator.make_token(user)
 
-        verify_url = f"http://localhost:5173/verify/{uid}/{token}/"
+        verify_url = f"http://13.126.143.118/verify/{uid}/{token}/"
 
         subject = "Verify your TuneFlow Account 🎧"
 
